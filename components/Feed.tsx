@@ -21,9 +21,6 @@ const Feed = ({ tweets: tweetsProp }: Props) => {
 
     toast.success('Feed Updated!', { id: refreshToast })
   }
-  useEffect(() => {
-    setTweets(tweets)
-  }, [tweets])
 
   return (
     <div className="col-span-7 border-x lg:col-span-5 ">

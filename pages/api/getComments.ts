@@ -23,7 +23,7 @@ export default async function handler(
     const comments: Comment[] = await sanityClient.fetch(commentQuery, {
       tweetId,
     })
-
+    res.setHeader('Cache-Control', 'no-store')
     res.status(200).json(<Data>comments)
   } catch (error) {
     res.status(400).json({ message: 'Not enought information given' })

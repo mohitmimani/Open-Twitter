@@ -49,7 +49,6 @@ const Tweet = ({ tweet }: Props) => {
       method: 'POST',
     })
 
-    console.log('WOOHOO we made it', result)
     toast.success('Comment Posted!', {
       id: commentToast,
     })
