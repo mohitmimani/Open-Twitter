@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply scrollbar-w-1 scrollbar-thumb-rounded-lg scrollbar-track-gray-100 scrollbar-thumb-twitter
+    }
+}
