@@ -1,5 +1,5 @@
 import { RefreshIcon } from '@heroicons/react/outline'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Tweet } from '../typing'
 import TweetBox from './TweetBox'
 import TweetComponent from './Tweet'
@@ -21,6 +21,9 @@ const Feed = ({ tweets: tweetsProp }: Props) => {
 
     toast.success('Feed Updated!', { id: refreshToast })
   }
+  useEffect(() => {
+    setTweets(tweets)
+  }, [tweets])
 
   return (
     <div className="col-span-7 border-x lg:col-span-5 ">
